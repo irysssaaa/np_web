@@ -490,3 +490,22 @@ header .burger:focus-visible{ outline:2px solid #3c0069; outline-offset:2px; }
 .product-grid .left-side .row .product-banner.dark .text{
   padding-left: 20px;                          /* комфортний відступ між фото і текстом */
 }
+/* === BLOCK 5 — mobile: повертаємо правильні відступи для кожного банера === */
+@media (max-width:768px){
+  /* не чіпаємо твої центрування — лише задаємо коректний top padding */
+  .big-banners .banner-item.banner-1{
+    /* дві накладені фотки зверху, треба багато місця */
+    padding: clamp(360px,95vw,560px) 16px 56px !important;
+  }
+  .big-banners .banner-item.banner-2{
+    /* у банера 2 картинка йде в потоці над текстом, вистачає невеликого top */
+    padding: 32px 16px 56px !important;
+  }
+  .big-banners .banner-item.banner-3{
+    /* картинка absolute по центру — даємо місце зверху */
+    padding: clamp(360px,90vw,540px) 16px 56px !important;
+  }
+  .big-banners .banner-item.banner-4{
+    padding: clamp(360px,90vw,540px) 16px 56px !important;
+  }
+}
